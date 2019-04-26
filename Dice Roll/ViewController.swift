@@ -22,21 +22,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //label.text = "🐷贝贝么么"
     }
 
     
     @IBAction func buttonTap(_ sender: UIButton) {
+        
         let firstNum = arc4random_uniform(5) + 1
         let secondNum = arc4random_uniform(5) + 1
-        let sum = firstNum + secondNum
+       
         
         label.text = "The sum is: \(firstNum + secondNum) "
         
         print(firstNum)
         print(secondNum)
         
-        leftImageView.image = UIImage(named: "Dice6")
-        rightImageView.image = UIImage(named: "Dice1")
+        leftImageView.image = UIImage(named: "Dice\(firstNum)")
+        rightImageView.image = UIImage(named: "Dice\(secondNum)")
         
         
     }
